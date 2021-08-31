@@ -1,4 +1,4 @@
-    1  clear
+1  clear
     2  apt update
     3  clear
     4  apt install -y docker.io
