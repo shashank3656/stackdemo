@@ -1,53 +1,53 @@
-clear
-apt update
-clear
-apt install -y docker.io
-docker --version
-docker version
-clear
-apt install docker-compose -y
-clear
-docker-compose --v
-docker-compose --version
-clear
-docker swarm init
-docker service ls
-docker nodes ls
-docker node ls
-clear
-dokcer --version
-clear
-docker version
-clear
-docker pull hhtpd
-clear
-docker pull httpd
-docker images
-docker run -it -d --name web1 -p 80:80 httpd:latest
-docker ps
-docker images -q
-docker rm -f web1
-docker ps -a
-docker ps 
-docker images
-docker rm $(docker ps -aq)
-docker rm -f  $(docker ps -aq)
-docker rm $(docker images -q)
-docker rmi -f  $(docker images -q)
-clear
-docker service create --name myweb --replicas 3 nginx
-docker service ls
-docker service create --name myservice --mode global alpine top
-docker service ls
-docker services ps myservices
-clear
-docker service ps 
-docker service ps myweb
-docker service ps myservices
-docker service ps myservice
-clear
-docker network ls
-docker network create -d overlay nginx-net1
+1  clear
+    2  apt update
+    3  clear
+    4  apt install -y docker.io
+    5  docker --version
+    6  docker version
+    7  clear
+    8  apt install docker-compose -y
+    9  clear
+   10  docker-compose --v
+   11  docker-compose --version
+   12  clear
+   13  docker swarm init
+   14  docker service ls
+   15  docker nodes ls
+   16  docker node ls
+   17  clear
+   18  dokcer --version
+   19  clear
+   20  docker version
+   21  clear
+   22  docker pull hhtpd
+   23  clear
+   24  docker pull httpd
+   25  docker images
+   26  docker run -it -d --name web1 -p 80:80 httpd:latest
+   27  docker ps
+   28  docker images -q
+   29  docker rm -f web1
+   30  docker ps -a
+   31  docker ps 
+   32  docker images
+   33  docker rm $(docker ps -aq)
+   34  docker rm -f  $(docker ps -aq)
+   35  docker rm $(docker images -q)
+   36  docker rmi -f  $(docker images -q)
+   37  clear
+   38  docker service create --name myweb --replicas 3 nginx
+   39  docker service ls
+   40  docker service create --name myservice --mode global alpine top
+   41  docker service ls
+   42  docker services ps myservices
+   43  clear
+   44  docker service ps 
+   45  docker service ps myweb
+   46  docker service ps myservices
+   47  docker service ps myservice
+   48  clear
+   49  docker network ls
+   50  docker network create -d overlay nginx-net1
    51  docker service create --name nginx-service1 --publish target=80,published-80 -replicas=5 --network nginx-net1 nginx
    52  docker service create --name nginx-service1 --publish target=81,published-81 -replicas=5 --network nginx-net1 nginx
    53  clear
